@@ -1,17 +1,18 @@
 html {
-    background-color: Black;
-    background-image:url(sq-repeat.gif);
-    max-width: 50em;
-    margin: auto;
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to left, MediumBlue 1px, transparent 1px),
+    linear-gradient(to bottom, MediumBlue 1px, transparent 1px);
+  background-color: Black;
+  margin: auto;
+  max-width: 56em;
 }
 
 body {
-    color:white;
-    background-color:black;
-    font:normal 100% Verdana, Geneva, sans-serif;
-    margin: 0.5em;
-    padding: 0.5em;
-    align: center;
+  background-color: Black;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 1em;
 }
 
 ul {
@@ -21,13 +22,6 @@ ul {
 hr {
     clear: both;
 }
-
-/*div {padding:3px; background-color:black; border-width:1px; 
-border-style:dashed; border-color:DimGrey;}*/
-
-ul.horizontal {list-style-type:none; margin:0; padding:0;}
-ul.horizontal li {float:left; text-align:center;}
-ul.horizontal li a {display:block; width:150px;}
 
 a:link {color:CornFlowerBlue; text-decoration:none}
 a:visited {color:Plum; text-decoration:none;}
@@ -81,28 +75,37 @@ ul.actions li ul li {clear:left; width:180px; text-align:center; padding:5px; bo
 /*div.gallery {margin:9px; padding:3px; float:left; text-align:center;}*/
 a.gallery {margin:9px; padding:3px; float:left; text-align:center; border:1px dotted DimGrey;}
 
-#mainMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: DarkBlue;
+nav {
+  display: flex;
+  justify-content: center;
 }
 
-#mainMenu li {
-    float: left;
-    width: 25%;
+nav a {
+  background-color: DarkBlue;
+  flex-grow: 1;
+  font-size: large;
+  padding: 1em;
+  text-align: center;
 }
 
-#mainMenu li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+nav a:hover {
+  background-color: Navy;
+  text-decoration: none;
 }
 
-#mainMenu li a:hover {
-    background-color: black;
+nav a.active {
+  background-color: Black;
+  color: Silver;
+  flex-grow: 1;
+  font-size: large;
+  font-weight: bold;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a:link, nav a:active, nav a:visited{
+  color: Silver;
+  text-decoration: none;
 }
 
 .gallery div {
